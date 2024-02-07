@@ -1,0 +1,60 @@
+<header
+  class="fixed top-0 z-10 flex items-center justify-between w-full px-20 bg-transparent mt-7"
+>
+  <span class="header-title text-5xl text-[#C07F50]">Angie Combita M.</span>
+  <nav class="flex gap-x-10">
+    <a
+      href="/"
+      class="nav-link hover:text-[#C07F50] hover:border-b hover:border-[#C07F50] text-[#A6A4A4] focus:text-[#C07F50] text-[20px]"
+      >Home</a
+    >
+    <a
+      href="/About"
+      class="nav-link hover:text-[#C07F50] hover:border-b hover:border-[#C07F50] text-[#A6A4A4] focus:text-[#C07F50] text-[20px]"
+      >About</a
+    >
+    <a
+      href="/Skills"
+      class="nav-link hover:text-[#C07F50] hover:border-b hover:border-[#C07F50] text-[#A6A4A4] focus:text-[#C07F50] text-[20px]"
+      >Skills</a
+    >
+    <a
+      href="/Portfolio"
+      class="nav-link hover:text-[#C07F50] hover:border-b hover:border-[#C07F50] text-[#A6A4A4] focus:text-[#C07F50] text-[20px]"
+      >Portfolio</a
+    >
+    <a
+      href="/Contact"
+      class="nav-link hover:text-[#C07F50] hover:border-b hover:border-[#C07F50] text-[#A6A4A4] focus:text-[#C07F50] text-[20px]"
+      >Contact</a
+    >
+  </nav>
+</header>
+<style>
+  @font-face {
+    font-family: "Tuesday Night";
+    src: url("/fonts/TuesdayNight.otf") format("opentype");
+  }
+
+  .header-title {
+    font-family: "Tuesday Night", cursive;
+  }
+
+  .nav-link {
+    font-family: "Jost", sans-serif;
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+    padding-bottom: 3px; /* Espacio adicional para la línea debajo del texto */
+  }
+</style>
+<script>
+  document.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (header) {
+      if (window.scrollY > 0) {
+        header.classList.add("bg-white", "bg-opacity-75");
+      } else {
+        header.classList.remove("bg-white", "bg-opacity-75");
+      }
+    }
+  });
+</script>

@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title="Portfolio Angie Cómbita">
+  <main>
+    <!-- Contenido de Home -->
+
+    <section id="home" class="relative flex items-center h-screen w-full">
+      <img
+        src="/images/portada.png"
+        alt="Background"
+        class="absolute inset-0 object-cover w-full h-full z-[-1]"
+      />
+      <div class="ml-auto p-10" style="max-width: 36rem;">
+        <h1 class="text-[96px] font-bold text-[#000000] font-jost">
+          Hello! I'm a front-end developer.
+        </h1>
+        <a
+          href="/path-to-your-cv.pdf"
+          class="mt-4 inline-block bg-[#C07F50] text-white py-2 px-4 rounded hover:bg-[#A6A4A4] transition-colors"
+        >
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <About />
+    <Skills />
+    <Portfolio />
+    <Contact />
+  </main>
+</Layout>
