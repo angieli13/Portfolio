@@ -18,10 +18,8 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -32,10 +30,14 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @font-face {
+    font-family: "Tuesday Night";
+    src: url("/fonts/TuesdayNight.otf") format("opentype");
+  }
   :root {
   }
   html {
-    font-family: "Jost", sans-serif;
+    font-family: "Jost", "Roboto", sans-serif;
   }
   body {
   }

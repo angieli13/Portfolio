@@ -17,16 +17,40 @@ import Contact from "../components/Contact.astro";
         class="absolute inset-0 object-cover w-full h-full z-[-1]"
       />
       <div class="ml-auto p-10" style="max-width: 36rem;">
-        <h1 class="text-[96px] font-bold text-[#000000] font-jost">
-          Hello! I'm a front-end developer.
-        </h1>
-        <a
-          href="/path-to-your-cv.pdf"
-          class="mt-4 inline-block bg-[#C07F50] text-white py-2 px-4 rounded hover:bg-[#A6A4A4] transition-colors"
+        <div
+          id="typewriter"
+          class="text-[96px] font-bold text-[#000000] font-jost"
+          style="height: 150px;"
         >
-          Download CV
-        </a>
+        </div>
+        <div>
+          <a
+            id="cv"
+            href="/path-to-your-cv.pdf"
+            style="margin-top: 300px;"
+            class="inline-block bg-[#C07F50] text-white py-2 px-4 rounded hover:bg-[#A6A4A4] transition-colors w-auto text-center mx-auto"
+          >
+            Download CV
+          </a>
+        </div>
       </div>
+
+      <style>
+        @keyframes blink {
+          from,
+          to {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+
+        .typewriter-cursor {
+          opacity: 1;
+          animation: blink 1s step-end infinite;
+        }
+      </style>
     </section>
 
     <About />
@@ -35,3 +59,30 @@ import Contact from "../components/Contact.astro";
     <Contact />
   </main>
 </Layout>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const text = "Hello! I'm a front-end developer.";
+    const typewriterContainer = document.getElementById("typewriter");
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        typewriterContainer.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 150); // Ajusta este tiempo para controlar la velocidad de escritura
+      } else {
+        // Agrega el cursor parpadeante al finalizar el texto
+        typewriterContainer.innerHTML +=
+          '<span class="typewriter-cursor">|</span>';
+      }
+    }
+
+    if (typewriterContainer) {
+      // Limpia el contenedor antes de iniciar la animación para evitar duplicación
+      typewriterContainer.innerHTML = "";
+      typeWriter();
+    } else {
+      console.error("The typewriter container was not found.");
+    }
+  });
+</script>

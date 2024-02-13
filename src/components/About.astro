@@ -1,46 +1,140 @@
 <div
-  class="relative"
-  style="width: 989px; height: 896px; left: 79px; top: 1144px;"
+  class="flex relative"
+  style="width: 800px; height: 890px; left: 79px; top: 11px;"
 >
-  <h2
-    class="absolute font-jost text-[32px] leading-[46px] text-[#A6A4A4]"
-    style="width: 168px; height: 53px; left: 194px; top: 0;"
-  >
-    About Me
-  </h2>
-  <div
-    class="absolute"
-    style="width: 100px; height: 0px; left: 0; top: 28px; border: 3px solid #C07F50;"
-  >
+  <div class="flex-grow">
+    <h2
+      class="absolute font-jost text-[30px] leading-[46px] text-[#A6A4A4] slide-in-from-left-target"
+      style="width: 168px; height: 53px; left: 130px; top: 0;"
+    >
+      About Me
+    </h2>
+    <div
+      class="absolute slide-in-from-left-target"
+      style="width: 100px; height: 0px; left: 0; top: 28px; border: 2px solid #C07F50;"
+    >
+    </div>
+    <h3
+      class="absolute font-jost font-bold text-[40px] leading-[58px] text-black"
+      style="width: 693px; height: 53px; left: 0; top: 60px;"
+    >
+      Angie Liliana Cómbita Martínez
+    </h3>
+
+    <div
+      class="absolute font-roboto text-[20px] leading-[33px] text-[#A6A4A4] flex flex-col items-center text-justify"
+      style="width: 800px; height: auto; left: 0; top: 150px;"
+    >
+      <p class="mb-4">
+        Soy una desarrolladora Front-end junior con formación en Química, cuya
+        pasión por la tecnología y habilidades analíticas me llevaron a dominar
+        el desarrollo web. Especializada en tecnologías web, con experiencia en
+        back-end y diseño UX/UI.
+      </p>
+      <p class="mb-4">
+        Mi primer encuentro con la programación fue en la universidad, entre la
+        ciencia de datos, la nanotecnología, el cálculo de interacciones
+        moleculares, entre otros programas que debíamos manejar para diferentes
+        procesos o análisis en química, me di cuenta de que tenía habilidades
+        para programar y realmente lo disfrutaba. Durante los ocho años que
+        ejercí en el campo de la Química, la programación y la tecnología fueron
+        herramientas indispensables. Desde automatizar tareas de laboratorio
+        hasta innovar en métodos de enseñanza para las ciencias, siempre
+        encontré maneras de integrar la tecnología en mi trabajo.
+      </p>
+      <p class="mb-4">
+        Estas experiencias no solo reafirmaron mi pasión por la tecnología, sino
+        que también me motivaron a explorar más profundamente mis habilidades de
+        programación. Ahora, con tres años de experiencia específica en
+        programación, estoy emocionada de ser parte de la transformación
+        digital, uno de los mayores desafíos de nuestro tiempo. Estoy convencida
+        de que, al combinar mis conocimientos en Química con mi amor por la
+        programación, puedo aportar soluciones innovadoras y significativas en
+        este emocionante campo de la tecnología.
+      </p>
+    </div>
   </div>
-  <h3
-    class="absolute font-jost font-bold text-[40px] leading-[58px] text-black"
-    style="width: 693px; height: 53px; left: 0; top: 60px;"
+  <div
+    class="flex-none ml-auto relative"
+    style="margin-left: 850px; margin-top: 60px;"
   >
-    Angie Liliana Cómbita Martínez
-  </h3>
-  <p
-    class="absolute font-roboto text-[20px] leading-[33px] text-[#A6A4A4] flex items-center text-justify"
-    style="width: 989px; height: 750px; left: 0; top: 146px;"
-  >
-    Soy una desarrolladora Front-end junior con formación en Química, cuya
-    pasión por la tecnología y habilidades analíticas me llevaron a dominar el
-    desarrollo web. Especializada en tecnologías web, con experiencia en
-    back-end y diseño UX/UI. Mi primer encuentro con la programación fue en la
-    universidad, entre la ciencia de datos, la nanotecnología, el cálculo de
-    interacciones moleculares entre otros programas que debíamos manejar para
-    diferentes procesos o análisis en química, me di cuenta de que tenía
-    habilidades para programar y realmente lo disfrutaba. Durante los ocho años
-    que ejercí en el campo de la Química, la programación y la tecnología fueron
-    herramientas indispensables. Desde automatizar tareas de laboratorio hasta
-    innovar en métodos de enseñanza para las ciencias, siempre encontré maneras
-    de integrar la tecnología en mi trabajo. Estas experiencias no solo
-    reafirmaron mi pasión por la tecnología, sino que también me motivaron a
-    explorar más profundamente mis habilidades de programación. Ahora, con tres
-    años de experiencia específica en programación, estoy emocionada de ser
-    parte de la transformación digital, uno de los mayores desafíos de nuestro
-    tiempo. Estoy convencida de que, al combinar mis conocimientos en Química
-    con mi amor por la programación, puedo aportar soluciones innovadoras y
-    significativas en este emocionante campo de la tecnología.
-  </p>
+    <div class="image-container visible">
+      <img src="/images/marco.png" alt="Marco" class="max-w-sm h-auto" />
+    </div>
+    <div class="image-container fotodelmarco-container visible">
+      <img
+        src="/images/fotodelmarco.jpeg"
+        alt="Foto del marco"
+        class="fotodelmarco absolute top-[-600px] left-[80px] max-w-sm h-auto"
+      />
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .visible {
+      animation: fadeInUp 3s ease-out forwards;
+    }
+
+    .fotodelmarco:hover {
+      transform: scale(1.1); /* Efecto de hover */
+    }
+    @keyframes slideInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .visible-from-left {
+      animation: slideInFromLeft 3s ease-out forwards;
+    }
+  </style>
+
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              
+              if (entry.target.matches(".slide-in-from-left-target")) {
+                entry.target.classList.add("visible-from-left");
+              } else {
+           
+                entry.target.classList.add("visible");
+              }
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      const targets = document.querySelectorAll(
+        ".image-container, .slide-in-from-left-target"
+      );
+      targets.forEach((target) => {
+        observer.observe(target);
+      });
+    });
+  </script>
+</div>
+<div
+  class="bg-cover bg-center"
+  style="background-image: url('/images/oficina.png'); height: 500px;"
+>
 </div>
